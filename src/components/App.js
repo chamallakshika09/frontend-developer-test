@@ -8,8 +8,10 @@ import { USERS, PROJECTS } from '../utils/types';
 export const App = () => {
   return (
     <Container className="app" fixed>
-      <Box data-testid="app-box" m={2}>
+      <Box data-testid="app-box" marginY={16}>
         <DifferenceViewer getData={api.getUsersDiff} type={USERS} data-testid="users" />
+      </Box>
+      <Box data-testid="app-box" marginY={16}>
         <DifferenceViewer getData={api.getProjectsDiff} type={PROJECTS} data-testid="projects" />
       </Box>
     </Container>
