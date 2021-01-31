@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { App } from './App';
-import MainRouter from './MainRouter';
 
 describe('<App />', () => {
   let wrapper;
@@ -14,8 +13,11 @@ describe('<App />', () => {
     it('renders the Box', () => {
       expect(wrapper.find({ 'data-testid': 'app-box' })).toHaveLength(1);
     });
-    it('renders the MainRouter', () => {
-      expect(wrapper.find(MainRouter)).toHaveLength(1);
+    it('renders the Users DifferenceViewer', () => {
+      expect(wrapper.find({ 'data-testid': 'users' })).toHaveLength(1);
+    });
+    it('renders the Projects DifferenceViewer', () => {
+      expect(wrapper.find({ 'data-testid': 'projects' })).toHaveLength(1);
     });
   });
 });

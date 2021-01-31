@@ -28,7 +28,7 @@ const resolveOrRejectCollection = (timesCalled, collection) => () => {
         offset: hasItems ? sliceStart : totalItems,
         total: totalItems,
       });
-    }, DEFAULT_DELAY)
+    }, DEFAULT_DELAY);
   });
 };
 
@@ -44,7 +44,9 @@ const getUsersDiff = () => {
   return resolveOrRejectCollection(timesCalled, usersDiff);
 };
 
-export default {
+const api = {
   getProjectsDiff: getProjectsDiff(),
   getUsersDiff: getUsersDiff(),
 };
+
+export default api;

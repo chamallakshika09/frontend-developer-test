@@ -1,4 +1,4 @@
-import DataReducer from './DataReducer';
+import DataReducer from './reducer';
 
 const INITIAL_STATE = {
   isLoading: false,
