@@ -11,7 +11,7 @@ describe('<App />', () => {
 
   describe('render()', () => {
     it('renders the Box', () => {
-      expect(wrapper.find({ 'data-testid': 'app-box' })).toHaveLength(1);
+      expect(wrapper.find({ 'data-testid': 'app-box' })).toHaveLength(2);
     });
     it('renders the Users DifferenceViewer', () => {
       expect(wrapper.find({ 'data-testid': 'users' })).toHaveLength(1);
